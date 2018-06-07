@@ -1583,7 +1583,7 @@ def _are_records_equivalent(a_record_1, a_record_2):
     a_record_1 = copy(a_record_1)
     a_record_2 = copy(a_record_2)
 
-    ignore_properties = [_ID_PROPERTY]
+    ignore_properties = [_ID_PROPERTY, _EXT_ATTR_PROPERTY]
     if not (a_record_1.get(_USE_TTL_PROPERTY, True) or a_record_2.get(_USE_TTL_PROPERTY, True)):
         # Not using TTL property therefore we don't care what the TTL value
         # is
